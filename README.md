@@ -163,26 +163,5 @@ The goal is reducing costly mistakes on non-trivial work, not slowing down simpl
 MIT
 
 
-Now a **living system** inspired by:
-- [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) — the agent that grows with you.
-- EvoSkills (arXiv:2604.01687) — autonomous multi-file skill construction.
-- HyperAgents (arXiv:2603.19461) — self-referential meta-improvement.
-- Karpathy/autoresearch — autonomous 5-min experiment loops.
-
-**New principles 0, 5, and 6** turn static guidelines into a recursive, self-improving Claude Code agent.
-
-
-## Self-Evolving Capabilities
-
-This repository implements a structured self-evolution protocol defined in `CLAUDE.md` (Principles 0, 5, and 6). Compatible agents can autonomously extract, validate, version, and reuse skills across sessions while enforcing immutable human oversight.
-
-The protocol draws from:
-- [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) — persistent skill acquisition and learning loops
-- EvoSkills (arXiv:2604.01687) — CoT-guided multi-file skill construction with co-evolutionary verification
-- Hyperagents (arXiv:2603.19461) — self-referential meta-improvement of the improvement process itself
-
-These additions transform the static Karpathy-derived guidelines into a living, research-backed system for long-term agent capability growth.
-
-## License
 
 MIT
