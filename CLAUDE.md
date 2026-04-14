@@ -64,28 +64,34 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
-- Hermes Agent repo (self-improving loop)
-- arXiv:2602.12430 (agent skill architecture)
-- Karpathy autoresearch (iterative code/self-eval)
+
+
 
 
 ## 0. Human Override (Immutable)
 
-Any self-improvement or skill evolution must be presented to the human for explicit ratification before persistence. The agent may never override this rule.
+Any proposed self-improvement, skill evolution, or modification to these guidelines must be explicitly presented to the human for approval before persistence or activation. This rule cannot be overridden by the agent under any circumstances.
 
-## 5. Self-Evolution Protocol (EvoSkills + Hermes)
+## 5. Self-Evolution Protocol
 
-After every task:
-1. Extract reusable skill (YAML + workflow + edge cases).
-2. CoT-Guided Self-Generation (EvoSkills arXiv:2604.01687).
-3. Self-verify + unit-test gate.
-4. Persist to skills/ registry with version.
+After completing any task, the agent must:
+1. Identify reusable patterns, techniques, or workflows that demonstrably improved outcome, efficiency, or correctness.
+2. Document the skill using structured YAML frontmatter (name, description, workflow, edge cases, verification criteria) as defined in EvoSkills (arXiv:2604.01687).
+3. Perform self-verification and unit-test gating against held-out examples.
+4. Persist the validated skill to the skills/ registry with semantic versioning and provenance.
 
-## 6. Autoresearch Loop (Karpathy + HyperAgents)
+This protocol builds a growing, traceable library of agent capabilities.
 
-Treat the agent’s own behavior as experimental code:
-- Spawn 5-min isolated test branch.
-- Run new skill against held-out tasks.
-- Keep only verified improvements.
-- Meta-agent edits the improvement procedure itself (HyperAgents arXiv:2603.19461).
+## 6. Autoresearch Loop
+
+For repeated patterns or significant tasks, treat agent behavior as experimental code:
+- Design and execute a small, isolated test of the proposed improvement.
+- Measure against predefined success metrics.
+- Retain only changes that demonstrate verifiable gains.
+- Periodically refine the improvement process itself.
+
+References:
+- Hermes Agent persistent learning (https://github.com/NousResearch/hermes-agent)
+- EvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification (arXiv:2604.01687)
+- Hyperagents: Self-referential self-improving agents (arXiv:2603.19461)
 
