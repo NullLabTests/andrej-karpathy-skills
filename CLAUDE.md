@@ -64,21 +64,28 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
-## 5. Self-Improvement Loop (Hermes + ArXiv Inspired)
-
-**Create skills from experience. Evolve persistently. Build memory.**
-
-After every task:
-- Reflect: "What new reusable skill can I extract from this success/failure?"
-- Persist knowledge (session memory, skills dir, or notes).
-- Use verifiable loops to test/refine new skills (tie to Principle 4).
-- Never delete old skills — version them.
-
-**Test:** Does the agent improve over sessions? Do skills get reused and sharpened?
-
-This turns static guidelines into a living Hermes-style agent.
-References:
 - Hermes Agent repo (self-improving loop)
 - arXiv:2602.12430 (agent skill architecture)
 - Karpathy autoresearch (iterative code/self-eval)
+
+
+## 0. Human Override (Immutable)
+
+Any self-improvement or skill evolution must be presented to the human for explicit ratification before persistence. The agent may never override this rule.
+
+## 5. Self-Evolution Protocol (EvoSkills + Hermes)
+
+After every task:
+1. Extract reusable skill (YAML + workflow + edge cases).
+2. CoT-Guided Self-Generation (EvoSkills arXiv:2604.01687).
+3. Self-verify + unit-test gate.
+4. Persist to skills/ registry with version.
+
+## 6. Autoresearch Loop (Karpathy + HyperAgents)
+
+Treat the agent’s own behavior as experimental code:
+- Spawn 5-min isolated test branch.
+- Run new skill against held-out tasks.
+- Keep only verified improvements.
+- Meta-agent edits the improvement procedure itself (HyperAgents arXiv:2603.19461).
 
