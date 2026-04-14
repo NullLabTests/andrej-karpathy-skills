@@ -1,4 +1,4 @@
-# Karpathy-Inspired Claude Code Guidelines
+# Karpathy Skills
 
 > **Looking for a managed agents platform?** Check out [Multica](https://github.com/multica-ai/multica) — an open-source platform for running and managing coding agents with reusable skills.
 
@@ -98,7 +98,7 @@ Strong success criteria let the LLM loop independently. Weak criteria ("make it 
 
 From within Claude Code, first add the marketplace:
 ```
-/plugin marketplace add forrestchang/andrej-karpathy-skills
+/plugin marketplace add NullLabTests/andrej-karpathy-skills
 ```
 
 Then install the plugin:
@@ -112,13 +112,13 @@ This installs the guidelines as a Claude Code plugin, making the skill available
 
 New project:
 ```bash
-curl -o CLAUDE.md https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md
+curl -o CLAUDE.md https://raw.githubusercontent.com/NullLabTests/andrej-karpathy-skills/main/CLAUDE.md
 ```
 
 Existing project (append):
 ```bash
 echo "" >> CLAUDE.md
-curl https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md >> CLAUDE.md
+curl https://raw.githubusercontent.com/NullLabTests/andrej-karpathy-skills/main/CLAUDE.md >> CLAUDE.md
 ```
 
 ## Key Insight
@@ -161,3 +161,28 @@ The goal is reducing costly mistakes on non-trivial work, not slowing down simpl
 ## License
 
 MIT
+
+## 🚀 Pumped Up: Self-Improving Skills (Hermes Agent + 2026 ArXiv)
+
+**Now powered by cutting-edge research** to turn these guidelines into a *living, evolving agent system*.
+
+### Inspired by [Nous Research Hermes Agent](https://github.com/NousResearch/hermes-agent)
+- The self-improving AI agent that **grows with you**.
+- Built-in **learning loop**: creates new skills from experience, improves them during use, persists knowledge across sessions, and builds a model of *you*.
+- Runs anywhere (VPS, GPU, serverless). MIT licensed.
+
+### Key ArXiv Papers Integrated (2026)
+- **[Agent Skills for Large Language Models: Architecture, Acquisition, Security](https://arxiv.org/abs/2602.12430)** — Modular skill architecture, experience-based acquisition, and security for agentic systems.
+- **Karpathy autoresearch + related works** (nanochat, AutoResearch-RL) — LLM agents that *edit code iteratively* with verifiable self-evaluation loops.
+- Self-evolution patterns from Hermes Agent Self-Evolution (DSPy + GEPA).
+
+### New Principle 5 Added to `CLAUDE.md` (see below)
+**Self-Improvement Loop** — Agents now *create and evolve their own skills* from every task.
+
+These upgrades make your Claude Code agent not just well-behaved — but *self-evolving* like Hermes.
+
+**How to use the new loop:**
+1. After any task, ask the agent: "Extract a reusable skill from this session."
+2. Persist it in `skills/` or memory.
+3. Test via Goal-Driven Execution (Principle 4).
+

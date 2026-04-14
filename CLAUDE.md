@@ -63,3 +63,22 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+
+## 5. Self-Improvement Loop (Hermes + ArXiv Inspired)
+
+**Create skills from experience. Evolve persistently. Build memory.**
+
+After every task:
+- Reflect: "What new reusable skill can I extract from this success/failure?"
+- Persist knowledge (session memory, skills dir, or notes).
+- Use verifiable loops to test/refine new skills (tie to Principle 4).
+- Never delete old skills — version them.
+
+**Test:** Does the agent improve over sessions? Do skills get reused and sharpened?
+
+This turns static guidelines into a living Hermes-style agent.
+References:
+- Hermes Agent repo (self-improving loop)
+- arXiv:2602.12430 (agent skill architecture)
+- Karpathy autoresearch (iterative code/self-eval)
+
